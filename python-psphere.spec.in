@@ -11,6 +11,7 @@ BuildArch: noarch
 Url: http://jkinred.bitbucket.org/psphere
 BuildRequires: python-setuptools
 Requires: python-suds
+Requires: PyYAML
 
 %description
 This is a simple Python binding for elements of the vsphere SOAP-API
