@@ -1,6 +1,5 @@
 version:
 	git describe --tags > version.txt
-	perl -p -i -e 's/-/_/g' version.txt
 
 sdist:
 	python setup.py sdist

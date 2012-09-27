@@ -1,8 +1,8 @@
 Summary: vSphere SDK for Python
 Name: python-psphere
-Version: @VERSION@
+Version: @UNDERSCORE_VERSION@
 Release: 1%{?dist}
-Source0: %{name}-%{version}.tar.gz
+Source0: psphere-@VERSION@.tar.gz
 License: ASL 2.0
 Group: Development/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -16,7 +16,7 @@ Requires: python-suds
 This is a simple Python binding for elements of the vsphere SOAP-API
 
 %prep
-%setup -n %{name}-%{version} -n %{name}-%{version}
+%setup -n psphere-@VERSION@
 
 %build
 python setup.py build
@@ -31,6 +31,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Thu Sep 27 2012 Ian McLeod <imcleod@redhat.com> - 0.5.1-1
+- Rebase against upstream version
+- Incorporate templated SPEC file into github branch 
+
 * Thu Mar 15 2012 Ian McLeod <imcleod@redhat.com> - 0.1-5
 - Remove Vendor field from SPEC file
 
